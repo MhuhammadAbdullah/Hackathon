@@ -8,7 +8,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px 50px 30px 50px;
+    margin: 30px 50px;
 }
 
 .top-content {
@@ -29,17 +29,11 @@ body {
     font-weight: 500;
 }
 
-/* .btn{
-    font-size: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    border: 3px solid black;
-} */
 .btn a {
     text-decoration: none;
     color: black;
     border: 1px solid black;
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px;
     font-weight: 600;
     font-size: 20px;
     border-radius: 10px;
@@ -77,7 +71,6 @@ body {
 
 .btn2 {
     padding-top: 50px;
-
 }
 
 .btn2 a {
@@ -85,7 +78,7 @@ body {
     color: white;
     background-color: black;
     border: 1px solid black;
-    padding: 20px 40px 20px 40px;
+    padding: 20px 40px;
     font-weight: 600;
     font-size: 20px;
     border-radius: 10px;
@@ -124,7 +117,7 @@ body {
     background-color: #B9FF66;
     justify-self: center;
     align-items: center;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -133,13 +126,140 @@ body {
     font-size: 20px;
     display: flex;
     justify-content: center;
-
 }
 
-.desktop .services-block {
-    m-[0_100px_80px_0]
-    flex
-    flex-row
-    w-[fit-content]
-    box-sizing-border
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-content {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.learn-more {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.learn-more img {
+    margin-right: 10px;
+    width: 16px;
+}
+
+/* First card style */
+.seo {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Second card style */
+.ppc {
+    background-color: #d4ff73;
+    color: #000;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1200px) {
+    .top-content, .mid-content, .brand, .content-container2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .mid-content {
+        gap: 50px;
+    }
+
+    .mid-content2 {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        margin: 30px 20px;
+    }
+
+    .btn a, .btn2 a {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+
+    .heading {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .mid-heading {
+        font-size: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navigation {
+        flex-direction: column;
+    }
+
+    .btn a, .btn2 a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+
+    .mid-heading {
+        font-size: 24px;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
 }
