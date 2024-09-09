@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Space Grotesk;
+    src: url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+}
 body {
     margin: 0;
     padding: 0;
@@ -8,7 +12,11 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px 50px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 40px 0; 
 }
 
 .top-content {
@@ -27,14 +35,15 @@ body {
     gap: 30px;
     font-size: 16px;
     font-weight: 500;
+    list-style: none;
 }
 
 .btn a {
+    font-family: Space Grotesk, sans-serif;
     text-decoration: none;
     color: black;
     border: 1px solid black;
     padding: 20px 40px;
-    font-weight: 600;
     font-size: 20px;
     border-radius: 10px;
 }
@@ -50,7 +59,7 @@ body {
     justify-content: center;
     align-items: start;
     gap: 100px;
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 .content-container {
@@ -58,9 +67,9 @@ body {
 }
 
 .heading {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    font-weight: 600;
+    font-family: Space Grotesk, sans-serif;
+    font-size: 90px;
+    font-weight: 500;
     line-height: 60px;
 }
 
@@ -74,12 +83,12 @@ body {
 }
 
 .btn2 a {
+    font-family: Space Grotesk, sans-serif;
     text-decoration: none;
     color: white;
     background-color: black;
     border: 1px solid black;
     padding: 20px 40px;
-    font-weight: 600;
     font-size: 20px;
     border-radius: 10px;
 }
@@ -95,7 +104,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 80px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .mid-content2 {
@@ -108,89 +117,351 @@ body {
     justify-content: center;
     align-items: start;
     gap: 30px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .mid-heading {
+    font-family: Space Grotesk, sans-serif;
     font-size: 40px;
     font-weight: 600;
     background-color: #B9FF66;
     justify-self: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
 
 .para2 {
     font-size: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
 
-.cards {
+
+.cards1{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    margin-top: 100px;
+}
+.cards2, .cards3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
 }
 
-.card {
-    width: 300px;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.card1, .card2{
+    width: 650px;
+    height: 350px;
+    border: 1px solid black;
+    border-bottom-width: 8px;
+    border-radius: 50px;
+    background: #F3F3F3;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-content{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
 }
-
-.card img {
-    width: 100px;
-    align-self: center;
-    margin-bottom: 20px;
+.card-content .title{
+    font-family: Space Grotesk, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
 }
-
-.card-content h3 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.card-content {
-    margin-bottom: 10px;
+.card1 .icon-container, .card2 .icon-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
+.icon-container p{
+    font-size: 25px;
+    margin-top: 16px;
 
-.learn-more {
+}
+.card1 i{
+    font-size: 50px;
+    background: #B9FF66;
+    border-radius: 50px;
     display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+}
+.card2{
+    background: #B9FF66;
+}
+
+.card2 i{
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+}
+/* part 2================= */
+.card1-part2, .card2-part2{
+    width: 650px;
+    height: 350px;
+    border: 1px solid black;
+    border-bottom-width: 8px;
+    border-radius: 50px;
+    background: #000000;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    color: #000;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.card1-part2 .card-content .title{
+    font-size: 30px;
     font-weight: bold;
+    color: white;
+}
+.card1-part2 .icon-container, .card2-part2 .icon-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.card1-part2 .icon-container p{
+    font-size: 25px;
+    color: white;
+}
+.card1-part2 i{
+    font-size: 50px;
+    background: #000000;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+}
+.card2-part2{
+    background: #F3F3F3;
+}
+
+.card2-part2 i{
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+    background: #B9FF66;
+    border-radius: 50px;
+}
+
+/* part 3 ================== */
+
+.card1-part3, .card2-part3{
+    width: 650px;
+    height: 350px;
+    border: 1px solid black;
+    border-bottom-width: 8px;
+    border-radius: 50px;
+    background: #B9FF66;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.card2-part3 .card-content .title{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.card1-part3 .icon-container, .card2-part3 .icon-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.card2-part3 .icon-container p{
+    font-size: 25px;
+    color: white;
+}
+.card1-part3 i{
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+}
+.card2-part3{
+    background: #000000;
+}
+
+.card2-part3 i{
+    font-size: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+    color: white;
+    border-radius: 50px;
+}
+.purposal-card{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 250px;
+    margin-top: 50px;
+    width: 76%;
+    height: 370px;
+    background: #F3F3F3;
+    border-radius: 30px;
+}
+.purposal-container{
+    font-family: Space Grotesk, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.purposal-content{
+    margin-top: 70px;
+}
+.purposal-heading {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.purposal-para {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.purposal-btn {
+    font-family: Space Grotesk, sans-serif;
+    padding-top: 50px;
+}
+
+.purposal-btn a {
     text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    padding: 20px 40px;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
-.learn-more img {
-    margin-right: 10px;
-    width: 16px;
+.purposal-btn a:hover {
+    background-color: white;
+    color: black;
+}
+.content-container3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: px;
+    margin-top: 100px;
+    margin-right: 290px;
 }
 
-/* First card style */
-.seo {
-    background-color: #f0f0f0;
-    color: #000;
+.para2 {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+.case-studies-heading{
+    font-family: Space Grotesk, sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    background-color: #B9FF66;
+    justify-self: start;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 50px;
 }
 
-/* Second card style */
-.ppc {
-    background-color: #d4ff73;
-    color: #000;
+.case-studies-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
 }
-
+.case-studies-cotent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border-radius: 30px;
+    width: 76%;
+    height: 300px;
+}
+.case-studies{
+    font-family: Space Grotesk, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+}
+.case-studies-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-content: center;
+    gap: 15px;
+    color: #B9FF66;
+}
+.case-studies-icon p{
+    font-size: 22px;
+}
+.case-studies-icon i{
+    font-size: 30px;
+    margin-top: 5px;
+}
+.para-container1, .para-container2{
+    padding-right: 20px;
+    border-right: 1px solid white;
+}
 /* Responsive Design */
 
 @media screen and (max-width: 1200px) {
